@@ -1,0 +1,14 @@
+select zawodnik.imie, zawodnik.nazwisko 
+from zawodnik 
+where zawodnik.pozycja_id=4;
+
+select liga.zespol, liga.punkty, liga.grupa 
+from liga 
+order by liga.punkty desc;
+
+select zawodnik.id, zawodnik.nazwisko, pozycja.nazwa 
+from zawodnik 
+inner join pozycja on pozycja.id=zawodnik.pozycja_id 
+where zawodnik.id in (3,5);
+
+truncate rozgrywka;
